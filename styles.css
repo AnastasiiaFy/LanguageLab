@@ -463,7 +463,7 @@ footer p {
 
     .start-btn {
         font-size: 15px;
-        margin-right: 5px;
+        margin-right: 2px;
         border-radius: 10px;
     }
 
@@ -489,7 +489,6 @@ footer p {
         padding: 0; 
     }
 
-    /*---*/
     .progress-container {
         gap: 15px; 
         padding: 10px 20px;
@@ -525,7 +524,7 @@ footer p {
 
     .tests-value{
         font-size: 5px;
-        margin-top: -41px; 
+        margin-top: -42px; 
         padding: 0 35px 70px 27px;
     }
 }
