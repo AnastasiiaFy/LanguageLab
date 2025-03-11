@@ -103,8 +103,6 @@ footer p {
 }
 
 /*-----------------------------------------------ВІКНО УРОКИ----------------------------------------------------*/
-
-/* Секція уроків */
 .lessons-title {
     text-align: center;       /* Заголовок по центру */
     font-family: 'Instrument Sans', sans-serif;
@@ -231,6 +229,97 @@ footer p {
     transform: scale(0.95);
 }
 
+
+/*-----------------------------------------------ВІКНО МІЙ ПРОГРЕС----------------------------------------------------*/
+.progress-title {
+    text-align: center;       
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin: 100px 0 20px 0;    
+}
+
+.progress-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три рівні колонки */
+    gap: 40px; /* Відступи між елементами */
+    justify-items: center; /* Вирівнювання всередині кожної колонки */
+    align-items: center;
+    text-align: center;
+    padding: 10px 60px 10px 60px; /* Відступи від країв */
+}
+
+.progress-item {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.progress-item img {
+    width: 150px; 
+    height: auto;
+}
+
+.pie-chart {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #B54213 0% 91%,  
+        #FFDB58 91% 100%  
+    );
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+.pie-chart::after {
+    content: "";
+    width: 100px;  
+    height: 100px;
+    background-color: #F2F2EF; 
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.streak-value{
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-top: -60px; 
+    padding: 5px 10px;
+}
+
+.lessons-value{
+    position: absolute;
+    top: 30%; /* Зміни це значення для правильного вирівнювання */
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+.tests-value{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: -97px; 
+    padding: 0 45px 70px 55px;
+}
+
+.progress-text{
+    font-size: 25px;
+    color: black;
+}
+
+
 /*------------------Адаптивність для планшетів--------------------------------------------------*/
 @media (max-width: 1024px) {
     .lessons {
@@ -260,24 +349,59 @@ footer p {
     }
 
     .test div:first-child {
-        align-items: flex-start; /* Текст залишається вирівняним по лівому краю */
+        align-items: flex-start; 
     }
 
     .test div:last-child {
-        align-items: flex-end; /* Текст вирівнюється праворуч, але не центрується */
+        align-items: flex-end; 
     }
 
     .test div:first-child p,
     .test div:last-child p {
-        margin: 0; /* Прибираємо стандартні відступи */
-        padding: 0; /* Додатково очищаємо padding, якщо він є */
+        margin: 0; 
+        padding: 0; 
     }
+
+    .progress-container {
+        gap: 30px; 
+        padding: 10px 40px;
+    }
+    
+    .progress-item img {
+        width: 120px; 
+    }
+
+    .lessons-value {
+        font-size: 40px; 
+        top: 30%;
+    }
+
+    .progress-text {
+        font-size: 22px;
+    }
+
+    .pie-chart {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .pie-chart::after {
+        width: 80px;  
+        height: 80px;
+    }
+
+    .tests-value{
+        font-size: 18px;
+        margin-top: -74px; 
+        padding: 0 35px 70px 43px;
+    }
+
 }
 
 /*------------------Адаптивність для смартфонів--------------------------------------------------*/
 @media (max-width: 768px) {
     .logo img {
-        height: 28px; /* Розмір лого */
+        height: 28px; 
         width: 18px; 
     }
 
@@ -316,7 +440,7 @@ footer p {
         padding: 5px 1px 5px 1px;                  
         margin-right: 15px;
         width: fit-content;
-        margin: 0 auto; /* Центрування */
+        margin: 0 auto; 
     }
 
     .nav-btn {
@@ -329,7 +453,7 @@ footer p {
     }
 
     .tests {
-        padding: 0 30px 60px 30px; /* Відступи від країв */
+        padding: 0 30px 60px 30px; 
     }
 
     .test {
@@ -352,17 +476,52 @@ footer p {
     }
 
     .test div:first-child {
-        align-items: flex-start; /* Текст залишається вирівняним по лівому краю */
+        align-items: flex-start; 
     }
 
     .test div:last-child {
-        align-items: flex-end; /* Текст вирівнюється праворуч, але не центрується */
+        align-items: flex-end; 
     }
 
     .test div:first-child p,
     .test div:last-child p {
-        margin: 0; /* Прибираємо стандартні відступи */
-        padding: 0; /* Додатково очищаємо padding, якщо він є */
+        margin: 0 0 0 2px; 
+        padding: 0; 
+    }
+
+    /*---*/
+    .progress-container {
+        gap: 15px; 
+        padding: 10px 20px;
+    }
+    
+    .progress-item img {
+        width: 50px; 
+    }
+
+    .lessons-value {
+        font-size: 25px; 
+        top: 30%;
+    }
+
+    .progress-text {
+        font-size: 18px;
+    }
+
+    .pie-chart {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .pie-chart::after {
+        width: 30px;  
+        height: 30px;
+    }
+
+    .tests-value{
+        font-size: 14px;
+        margin-top: -74px; 
+        padding: 0 35px 70px 43px;
     }
 }
 
