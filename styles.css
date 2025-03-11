@@ -517,8 +517,8 @@ footer p {
     .pie-chart {
         width: 60px;
         height: 60px;
+        padding-bottom: 4px;
     }
-    
     .pie-chart::after {
         width: 35px;  
         height: 35px;
@@ -526,7 +526,7 @@ footer p {
 
     .tests-value{
         font-size: 5px;
-        margin-top: -26px; 
+        margin-top: -30px; 
         padding: 0 35px 70px 30px;
     }
 }
