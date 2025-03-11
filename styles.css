@@ -496,14 +496,22 @@ footer p {
     }
     
     .progress-item img {
-        width: 50px; 
+        width: 60px; 
+    }
+
+    .streak-value{
+        font-size: 15px;
+        margin-top: -70px; 
+        padding: 5px 10px;
     }
 
     .lessons-value {
-        font-size: 25px; 
-        top: 30%;
+        font-size: 22px; 
+        top: 20%;
     }
 
+
+    
     .progress-text {
         font-size: 18px;
     }
