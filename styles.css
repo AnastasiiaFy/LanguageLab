@@ -272,7 +272,7 @@ footer p {
         #FFDB58 91% 100%  
     );
     display: block;
-    margin: 5px;
+    margin: 10px;
     position: relative;
 }
 
@@ -526,7 +526,7 @@ footer p {
     .tests-value{
         font-size: 5px;
         margin-top: -37px; 
-        padding: 0 35px 70px 30px;
+        padding: 0 35px 70px 25px;
     }
 }
 
