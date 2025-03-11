@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2EF;
+}
+
+header {
+    display: flex;                      /*дозволяє вирівнювати додаткові елементи */
+    justify-content: space-between;     /*вирівнювання*/
+    align-items: center;
+    padding: 15px 25px;                 /*відступи між елементами та краями контейнера*/
+    position: fixed;                    /* Фіксований header */
+    top: 0;                             /* Закріплений на верхній частині */
+    left: 0;
+    width: 100%;                        /* Ширина 100% */
+    z-index: 1000;                      /* Щоб header був поверх іншого контенту */
+}
+
+/* Логотип і назва */
+.logo {
+    display: flex;
+    align-items: center; /* Вирівнювання по вертикалі */
+}
+
+.logo img {
+    height: 55px; /* Розмір лого */
+    width: 40px; 
+}
+
+.site-name {
+    font-family: 'Instrument Sans', sans-serif; 
+    font-size: 25px; 
+    color: black;
+    margin-left: 5px; /* Відступ від лого */
+}
+
+
+/* Навігаційний бар (кнопки) */
+.navbar {
+    display: flex;                       /* розміщення кнопок в один рядок */
+    background-color: rgba(16, 1, 2, 0.6); /* сірий фон з прозорістю 0.6 */
+    padding: 10px;                  /* відступи всередині прямокутника */
+    border-radius: 30px;                  /* заокруглені кути */
+    margin-top: 8px;
+    margin-right: 60px;                    /* відступ справа для зменшення притиснення до краю */
+    margin-left: 60px;                     /* відступ зліва, щоб розтягнути бар до центру */                       
+    justify-content: space-between;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    border: 2px solid rgbargba(169, 169, 169, 0.6); /* обведення сірим напівпрозорим кольором */
+    color: #F5F5F5;
+    font-family: 'Instrument Sans', sans-serif; 
+    font-size: 17px; 
+    padding: 3px 60px;                      /* Відступи для кнопок з боків */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px; 
+    margin: 0 10px; /* Відступи між кнопками */
+    box-sizing: content-box; /* Обведення не впливає на розмір кнопки */ 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Легке підсвічування фону при наведенні */
+}
+
+.nav-btn:active {
+    transform: scale(0.95); 
+}
+
+
+/* Секція уроків */
+.lessons {
+    display: grid;                              /* Використовуємо grid для розміщення уроків */
+    grid-template-columns: repeat(3, 1fr);      /* 3 колонки однакової ширини */
+    gap: 70px;                                  /* Відстань між елементами */
+    padding: 150px 60px 0 60px;                    /* Відступи від країв і коригування відступу зверху через фіксований header */
+}
+
+.lesson {
+    position: relative;
+    background-color: rgba(16, 1, 2, 0.3); /* Легкий фон для кожного уроку */
+    border-radius: 30px; /* Заокруглені кути */
+    padding: 4px 10px 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    height: 200px; /* Встановлюємо висоту кожного уроку */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.lesson h3 {
+    font-family: 'Instrument Sans', sans-serif; 
+    font-size: 22px;
+    color: #F5F5F5;
+    padding: 0 10px;
+    margin-bottom: 1px;
+}
+
+.lesson p {
+    padding: 0 10px;
+    font-family: 'Instrument Sans', sans-serif; /* Шрифт для кнопок */
+    font-size: 15px;
+    color: #F5F5F5;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.lesson img.lesson-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    width: 45px; 
+    height: 55px;
+}
+
+.lesson:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: scale(1.05); /* Збільшення картки на 5% при наведенні */
+}
+
+.lesson:active{
+    transform: scale(1); 
+}
+
+/*------------------Адаптивність для планшетів--------------------------------------------------*/
+@media (max-width: 1024px) {
+    .lessons {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px; 
+        padding: 100px 40px 0 40px;
+    }
+
+    .navbar {
+        padding: 8px; 
+        margin-left: 20px; 
+        margin-right: 40px;
+    }
+
+    .nav-btn {
+        font-size: 15px; 
+        padding: 3px 30px; 
+        border-radius: 10px; 
+    }
+}
+
+/*------------------Адаптивність для смартфонів--------------------------------------------------*/
+@media (max-width: 768px) {
+    .logo img {
+        height: 35px; /* Розмір лого */
+        width: 25px; 
+    }
+
+    .site-name {
+        font-size: 15px; 
+    }
+
+    .lessons {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px;
+        padding: 100px 20px 0 20px;
+    }
+
+    .lesson{
+        height: 140px;
+    }
+
+    .lesson h3 {
+        font-size: 18px;
+    }
+
+    .lesson p {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .lesson img.lesson-icon {
+        bottom: 10px;
+        right: 20px;
+        width: 35px; 
+        height: 45px;
+    }
+
+    .navbar {
+        padding: 5px;                  /* відступи всередині прямокутника */
+        width: 65%;
+        margin: 0 auto; /* Центрування */
+    }
+
+    .nav-btn {
+        font-size: 12px; 
+        padding: 5px 20px; /* Менші відступи */
+        flex-grow: 1; /* Автоматичне масштабування кнопок */
+        text-align: center;
+    }
+}
