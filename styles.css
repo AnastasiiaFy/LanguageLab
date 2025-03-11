@@ -187,8 +187,8 @@ header {
     }
 
     .navbar {
-        padding: 5px;                  /* відступи всередині прямокутника */
-        width: 60%;
+        padding: 5px 1px 5px 1px;                  /* відступи всередині прямокутника */
+        width: 65%;
         margin: 0 auto; /* Центрування */
     }
 
