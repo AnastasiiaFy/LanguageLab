@@ -127,6 +127,34 @@ header {
     transform: scale(1); 
 }
 
+/*Нижній бар*/
+footer {
+    display: flex;
+    justify-content: space-between; /* Розміщує контейнери по різні боки */
+    align-items: center;
+    width: 100%; /* Займає всю ширину екрану */
+    background-color: rgba(16, 1, 2, 0.6); /* Фон прямокутника */
+    color: #F5F5F5; /* Колір тексту */
+    padding: 15px 40px; /* Відступи всередині */
+    position: fixed; /* Фіксоване положення */
+    bottom: 0; /* Закріплення внизу */
+    left: 0; /* Початок від лівого краю */
+    height: 60px; /* Фіксована висота */
+    box-sizing: border-box;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column; /* Параграфи вертикально */
+    gap: 5px; /* Відстань між рядками */
+}
+
+footer p {
+    margin: 0; /* Забирає зайві відступи між параграфами */
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 14px;
+}
+
 /*------------------Адаптивність для планшетів--------------------------------------------------*/
 @media (max-width: 1024px) {
     .lessons {
