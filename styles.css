@@ -501,7 +501,7 @@ footer p {
 
     .streak-value{
         font-size: 11px;
-        margin-top: -47px; 
+        margin-top: -45px; 
         padding: 5px 10px;
     }
 
@@ -512,7 +512,7 @@ footer p {
 
     .progress-text {
         font-size: 12px;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     .pie-chart {
@@ -527,7 +527,7 @@ footer p {
 
     .tests-value{
         font-size: 5px;
-        margin-top: -90px; 
+        margin-top: -30px; 
         padding: 0 35px 70px 40px;
     }
 }
