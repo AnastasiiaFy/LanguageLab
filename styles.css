@@ -151,13 +151,13 @@ header {
 /*------------------Адаптивність для смартфонів--------------------------------------------------*/
 @media (max-width: 768px) {
     .logo img {
-        height: 35px; /* Розмір лого */
-        width: 25px; 
+        height: 32px; /* Розмір лого */
+        width: 22px; 
     }
 
     .site-name {
         font-size: 15px; 
-        margin-left: 3px; 
+        margin-left: 2px; 
     }
 
     .lessons {
@@ -188,7 +188,7 @@ header {
 
     .navbar {
         padding: 5px;                  /* відступи всередині прямокутника */
-        width: 65%;
+        width: 55%;
         margin: 0 auto; /* Центрування */
     }
 
