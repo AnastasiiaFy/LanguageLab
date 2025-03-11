@@ -194,7 +194,8 @@ header {
 
     .nav-btn {
         font-size: 12px; 
-        padding: 3px 10px; /* Менші відступи */
+        padding: 3px 12px; /* Менші відступи */
+        border-width: 1px;
         flex-grow: 1; /* Автоматичне масштабування кнопок */
         text-align: center;
     }
