@@ -496,12 +496,12 @@ footer p {
     }
     
     .progress-item img {
-        width: 60px; 
+        width: 70px; 
     }
 
     .streak-value{
-        font-size: 15px;
-        margin-top: -70px; 
+        font-size: 12px;
+        margin-top: -20px; 
         padding: 5px 10px;
     }
 
@@ -511,7 +511,7 @@ footer p {
     }
 
 
-    
+
     .progress-text {
         font-size: 18px;
     }
