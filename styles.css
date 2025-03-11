@@ -40,7 +40,6 @@ header {
     margin-left: 5px; /* Відступ від лого */
 }
 
-
 /* Навігаційний бар (кнопки) */
 .navbar {
     display: flex;                       /* розміщення кнопок в один рядок */
@@ -65,7 +64,7 @@ header {
     border-radius: 15px; 
     margin: 0 10px; /* Відступи між кнопками */
     box-sizing: content-box; /* Обведення не впливає на розмір кнопки */ 
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-btn:hover {
@@ -76,13 +75,50 @@ header {
     transform: scale(0.95); 
 }
 
+/*Нижній бар*/
+footer {
+    display: flex;
+    justify-content: space-between; /* Розміщує контейнери по різні боки */
+    align-items: center;
+    width: 100%; 
+    background-color: rgba(16, 1, 2, 0.7); 
+    color: #F5F5F5; 
+    padding: 15px 40px; 
+    height: 60px; 
+    margin-top: 60px;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+footer div {
+    display: flex;
+    flex-direction: column; /* Параграфи вертикально */
+    gap: 5px; /* Відстань між рядками */
+}
+
+footer p {
+    margin: 0; /* Забирає зайві відступи між параграфами */
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 14px;
+}
+
+/*-----------------------------------------------ВІКНО УРОКИ----------------------------------------------------*/
 
 /* Секція уроків */
+.lessons-title {
+    text-align: center;       /* Заголовок по центру */
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin: 120px 0 20px 0;    /* Верхній відступ, щоб він не злипався з header, і нижній відступ для розділення від grid */
+}
+
 .lessons {
     display: grid;                              /* Використовуємо grid для розміщення уроків */
     grid-template-columns: repeat(3, 1fr);      /* 3 колонки однакової ширини */
     gap: 70px;                                  /* Відстань між елементами */
-    padding: 150px 60px 0 60px;                    /* Відступи від країв і коригування відступу зверху через фіксований header */
+    padding: 10px 60px 0 60px;                    /* Відступи від країв і коригування відступу зверху через фіксований header */
 }
 
 .lesson {
@@ -132,31 +168,67 @@ header {
     transform: scale(1); 
 }
 
-/*Нижній бар*/
-footer {
-    display: flex;
-    justify-content: space-between; /* Розміщує контейнери по різні боки */
-    align-items: center;
-    width: 100%; 
-    background-color: rgba(16, 1, 2, 0.6); 
-    color: #F5F5F5; 
-    padding: 15px 40px; 
-    height: 60px; 
-    margin-top: 50px;
-    box-sizing: border-box;
-    position: relative; 
-}
 
-footer div {
-    display: flex;
-    flex-direction: column; /* Параграфи вертикально */
-    gap: 5px; /* Відстань між рядками */
-}
-
-footer p {
-    margin: 0; /* Забирає зайві відступи між параграфами */
+/*-----------------------------------------------ВІКНО ПРАКТИКА----------------------------------------------------*/
+.practice-title {
+    text-align: center;       
     font-family: 'Instrument Sans', sans-serif;
-    font-size: 14px;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin: 100px 0 20px 0;    
+}
+
+.tests {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Два стовпці */
+    gap: 20px; /* Відстань між тестами */
+    padding: 0 60px 60px 60px; /* Відступи від країв */
+}
+
+.test {
+    display: flex;
+    justify-content: space-between; /* Елементи розташовані по краях */
+    align-items: center;
+    background-color: rgba(16, 1, 2, 0.3); /* Напівпрозорий фон */
+    border-radius: 15px; /* Заокруглення */
+    padding: 15px 20px;
+    height: 80px; /* Фіксована висота */
+}
+
+.test div:first-child {
+    display: flex;
+    gap: 5px; 
+    font-size: 22px;
+    color: #F5F5F5;
+    align-items: center;
+}
+
+.test div:last-child {
+    display: flex;
+    gap: 10px; 
+    font-size: 22px;
+    color: #F5F5F5; 
+    align-items: center;
+}
+
+.start-btn {
+    background-color: rgba(16, 1, 2, 0.3);
+    color: #F2F2EF;
+    font-size: 20px;
+    border: none;
+    padding: 6px 25px;
+    margin-right: 10px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.start-btn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.start-btn:active {
+    transform: scale(0.95);
 }
 
 /*------------------Адаптивність для планшетів--------------------------------------------------*/
@@ -164,7 +236,7 @@ footer p {
     .lessons {
         grid-template-columns: repeat(2, 1fr); 
         gap: 40px; 
-        padding: 100px 40px 0 40px;
+        padding: 10px 40px 0 40px;
     }
 
     .navbar {
@@ -177,6 +249,28 @@ footer p {
         font-size: 15px; 
         padding: 3px 30px; 
         border-radius: 10px; 
+    }
+
+    .test div:first-child,
+    .test div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 2px; 
+        font-size: 20px;
+    }
+
+    .test div:first-child {
+        align-items: flex-start; /* Текст залишається вирівняним по лівому краю */
+    }
+
+    .test div:last-child {
+        align-items: flex-end; /* Текст вирівнюється праворуч, але не центрується */
+    }
+
+    .test div:first-child p,
+    .test div:last-child p {
+        margin: 0; /* Прибираємо стандартні відступи */
+        padding: 0; /* Додатково очищаємо padding, якщо він є */
     }
 }
 
@@ -195,7 +289,7 @@ footer p {
     .lessons {
         grid-template-columns: repeat(1, 1fr); 
         gap: 20px;
-        padding: 100px 20px 0 20px;
+        padding: 10px 20px 0 20px;
     }
 
     .lesson{
@@ -219,7 +313,7 @@ footer p {
     }
 
     .navbar {
-        padding: 5px 1px 5px 1px;                  /* відступи всередині прямокутника */
+        padding: 5px 1px 5px 1px;                  
         margin-right: 15px;
         width: fit-content;
         margin: 0 auto; /* Центрування */
@@ -227,10 +321,11 @@ footer p {
 
     .nav-btn {
         font-size: 10px; 
-        padding: 3px 10px; /* Менші відступи */
+        padding: 3px 10px; 
         border-width: 1px;
-        flex-grow: 1; /* Автоматичне масштабування кнопок */
+        flex-grow: 1; 
         margin: 0 3px;
         min-width: 50px;
     }
 }
+
