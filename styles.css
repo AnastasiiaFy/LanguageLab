@@ -327,5 +327,42 @@ footer p {
         margin: 0 3px;
         min-width: 50px;
     }
+
+    .tests {
+        padding: 0 30px 60px 30px; /* Відступи від країв */
+    }
+
+    .test {
+        padding: 15px;
+        height: 70px;
+    }
+
+    .start-btn {
+        font-size: 15px;
+        margin-right: 5px;
+        border-radius: 10px;
+    }
+
+    .test div:first-child,
+    .test div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 2px; 
+        font-size: 15px;
+    }
+
+    .test div:first-child {
+        align-items: flex-start; /* Текст залишається вирівняним по лівому краю */
+    }
+
+    .test div:last-child {
+        align-items: flex-end; /* Текст вирівнюється праворуч, але не центрується */
+    }
+
+    .test div:first-child p,
+    .test div:last-child p {
+        margin: 0; /* Прибираємо стандартні відступи */
+        padding: 0; /* Додатково очищаємо padding, якщо він є */
+    }
 }
 
