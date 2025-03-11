@@ -44,8 +44,8 @@ header {
     border-radius: 30px;                  /* заокруглені кути */
     margin-top: 8px;
     margin-right: 60px;                    /* відступ справа для зменшення притиснення до краю */
-    margin-left: 60px;                     /* відступ зліва, щоб розтягнути бар до центру */                       
-    justify-content: space-between;
+    margin-left: auto;                     /* відступ зліва, щоб розтягнути бар до центру */                       
+    width: fit-content;
 }
 
 .nav-btn {
@@ -55,7 +55,7 @@ header {
     color: #F5F5F5;
     font-family: 'Instrument Sans', sans-serif; 
     font-size: 17px; 
-    padding: 3px 60px;                      /* Відступи для кнопок з боків */
+    padding: 3px 50px;                      /* Відступи для кнопок з боків */
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 15px; 
     margin: 0 10px; /* Відступи між кнопками */
@@ -188,16 +188,17 @@ header {
 
     .navbar {
         padding: 5px 1px 5px 1px;                  /* відступи всередині прямокутника */
-        width: 65%;
+        margin-right: 10px;
+        width: fit-content;
         margin: 0 auto; /* Центрування */
     }
 
     .nav-btn {
         font-size: 12px; 
-        padding: 3px 12px; /* Менші відступи */
+        padding: 3px 10px; /* Менші відступи */
         border-width: 1px;
         flex-grow: 1; /* Автоматичне масштабування кнопок */
-        text-align: center;
+        margin: 0 3px;
         min-width: 50px;
     }
 }
