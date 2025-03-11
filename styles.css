@@ -501,7 +501,7 @@ footer p {
 
     .streak-value{
         font-size: 12px;
-        margin-top: -30px; 
+        margin-top: -45px; 
         padding: 5px 10px;
     }
 
@@ -511,7 +511,7 @@ footer p {
     }
 
     .progress-text {
-        font-size: 15px;
+        font-size: 12px;
     }
 
 
@@ -527,9 +527,9 @@ footer p {
     }
 
     .tests-value{
-        font-size: 14px;
-        margin-top: -74px; 
-        padding: 0 35px 70px 43px;
+        font-size: 5px;
+        margin-top: -90px; 
+        padding: 0 35px 70px 40px;
     }
 }
 
