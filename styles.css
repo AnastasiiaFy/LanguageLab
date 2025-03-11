@@ -9,7 +9,7 @@ header {
     display: flex;                      /*дозволяє вирівнювати додаткові елементи */
     justify-content: space-between;     /*вирівнювання*/
     align-items: center;
-    padding: 15px 25px;                 /*відступи між елементами та краями контейнера*/
+    padding: 15px 20px;                 /*відступи між елементами та краями контейнера*/
     position: fixed;                    /* Фіксований header */
     top: 0;                             /* Закріплений на верхній частині */
     left: 0;
@@ -120,7 +120,7 @@ header {
 
 .lesson:hover {
     background-color: rgba(0, 0, 0, 0.4);
-    transform: scale(1.05); /* Збільшення картки на 5% при наведенні */
+    transform: scale(1.05); 
 }
 
 .lesson:active{
@@ -193,7 +193,7 @@ header {
 
     .nav-btn {
         font-size: 12px; 
-        padding: 5px 20px; /* Менші відступи */
+        padding: 5px 15px; /* Менші відступи */
         flex-grow: 1; /* Автоматичне масштабування кнопок */
         text-align: center;
     }
