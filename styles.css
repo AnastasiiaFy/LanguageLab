@@ -193,8 +193,8 @@ header {
     }
 
     .nav-btn {
-        font-size: 11px; 
-        padding: 3px 12px; /* Менші відступи */
+        font-size: 12px; 
+        padding: 3px 15px; /* Менші відступи */
         border-width: 1px;
         flex-grow: 1; /* Автоматичне масштабування кнопок */
         text-align: center;
