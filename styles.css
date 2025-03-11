@@ -151,12 +151,12 @@ header {
 /*------------------Адаптивність для смартфонів--------------------------------------------------*/
 @media (max-width: 768px) {
     .logo img {
-        height: 32px; /* Розмір лого */
-        width: 22px; 
+        height: 28px; /* Розмір лого */
+        width: 18px; 
     }
 
     .site-name {
-        font-size: 15px; 
+        font-size: 13px; 
         margin-left: 2px; 
     }
 
