@@ -157,6 +157,7 @@ header {
 
     .site-name {
         font-size: 15px; 
+        margin-left: 3px; 
     }
 
     .lessons {
@@ -193,7 +194,7 @@ header {
 
     .nav-btn {
         font-size: 12px; 
-        padding: 5px 15px; /* Менші відступи */
+        padding: 3px 10px; /* Менші відступи */
         flex-grow: 1; /* Автоматичне масштабування кнопок */
         text-align: center;
     }
