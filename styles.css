@@ -1,8 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%; /* Розтягує body на всю висоту */
     margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column; /* Розташування контенту вертикально */
     background-color: #F2F2EF;
+}
+
+main {
+    flex: 1; /* Змушує main займати всю доступну висоту */
 }
 
 header {
@@ -132,15 +137,14 @@ footer {
     display: flex;
     justify-content: space-between; /* Розміщує контейнери по різні боки */
     align-items: center;
-    width: 100%; /* Займає всю ширину екрану */
-    background-color: rgba(16, 1, 2, 0.6); /* Фон прямокутника */
-    color: #F5F5F5; /* Колір тексту */
-    padding: 15px 40px; /* Відступи всередині */
-    position: fixed; /* Фіксоване положення */
-    bottom: 0; /* Закріплення внизу */
-    left: 0; /* Початок від лівого краю */
-    height: 60px; /* Фіксована висота */
+    width: 100%; 
+    background-color: rgba(16, 1, 2, 0.6); 
+    color: #F5F5F5; 
+    padding: 15px 40px; 
+    height: 60px; 
+    margin-top: 50px;
     box-sizing: border-box;
+    position: relative; 
 }
 
 footer div {
