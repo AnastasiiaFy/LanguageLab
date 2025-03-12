@@ -1,35 +1,36 @@
 html, body {
-    height: 100%; /* Розтягує body на всю висоту */
+    height: 100%; 
     margin: 0;
     display: flex;
-    flex-direction: column; /* Розташування контенту вертикально */
+    flex-direction: column; 
     background-color: #F2F2EF;
+    scroll-behavior: smooth;
 }
 
 main {
-    flex: 1; /* Змушує main займати всю доступну висоту */
+    flex: 1; 
 }
 
 header {
-    display: flex;                      /*дозволяє вирівнювати додаткові елементи */
-    justify-content: space-between;     /*вирівнювання*/
+    display: flex;                      
+    justify-content: space-between;    
     align-items: center;
-    padding: 15px 20px;                 /*відступи між елементами та краями контейнера*/
-    position: fixed;                    /* Фіксований header */
-    top: 0;                             /* Закріплений на верхній частині */
+    padding: 15px 20px;                 
+    position: fixed;                 
+    top: 0;                            
     left: 0;
-    width: 100%;                        /* Ширина 100% */
-    z-index: 1000;                      /* Щоб header був поверх іншого контенту */
+    width: 100%;                       
+    z-index: 1000;                     
 }
 
 /* Логотип і назва */
 .logo {
     display: flex;
-    align-items: center; /* Вирівнювання по вертикалі */
+    align-items: center; 
 }
 
 .logo img {
-    height: 55px; /* Розмір лого */
+    height: 55px; 
     width: 40px; 
 }
 
@@ -37,38 +38,40 @@ header {
     font-family: 'Instrument Sans', sans-serif; 
     font-size: 25px; 
     color: black;
-    margin-left: 5px; /* Відступ від лого */
+    margin-left: 5px; 
 }
 
 /* Навігаційний бар (кнопки) */
 .navbar {
-    display: flex;                       /* розміщення кнопок в один рядок */
-    background-color: rgba(16, 1, 2, 0.6); /* сірий фон з прозорістю 0.6 */
-    padding: 10px;                  /* відступи всередині прямокутника */
-    border-radius: 30px;                  /* заокруглені кути */
+    display: flex;                   
+    background-color: rgba(16, 1, 2, 0.6); 
+    padding: 10px;                
+    border-radius: 30px;                
     margin-top: 8px;
-    margin-right: 60px;                    /* відступ справа для зменшення притиснення до краю */
-    margin-left: auto;                     /* відступ зліва, щоб розтягнути бар до центру */                       
+    margin-right: 60px;                   
+    margin-left: auto;                                          
     width: fit-content;
 }
 
 .nav-btn {
     background: none;
     border: none;
-    border: 2px solid rgbargba(169, 169, 169, 0.6); /* обведення сірим напівпрозорим кольором */
+    text-decoration: none;
+    border: 2px solid rgbargba(169, 169, 169, 0.6); 
     color: #F5F5F5;
     font-family: 'Instrument Sans', sans-serif; 
     font-size: 17px; 
-    padding: 3px 50px;                      /* Відступи для кнопок з боків */
+    padding: 3px 50px;                      
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 15px; 
-    margin: 0 10px; /* Відступи між кнопками */
-    box-sizing: content-box; /* Обведення не впливає на розмір кнопки */ 
+    margin: 0 10px; 
+    box-sizing: content-box; 
+    display: inline-block;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-btn:hover {
-    background-color: rgba(0, 0, 0, 0.4); /* Легке підсвічування фону при наведенні */
+    background-color: rgba(0, 0, 0, 0.4); 
 }
 
 .nav-btn:active {
@@ -78,7 +81,7 @@ header {
 /*Нижній бар*/
 footer {
     display: flex;
-    justify-content: space-between; /* Розміщує контейнери по різні боки */
+    justify-content: space-between; 
     align-items: center;
     width: 100%; 
     background-color: rgba(16, 1, 2, 0.7); 
@@ -92,43 +95,43 @@ footer {
 
 footer div {
     display: flex;
-    flex-direction: column; /* Параграфи вертикально */
-    gap: 5px; /* Відстань між рядками */
+    flex-direction: column; 
+    gap: 5px; 
 }
 
 footer p {
-    margin: 0; /* Забирає зайві відступи між параграфами */
+    margin: 0; 
     font-family: 'Instrument Sans', sans-serif;
     font-size: 14px;
 }
 
 /*-----------------------------------------------ВІКНО УРОКИ----------------------------------------------------*/
 .lessons-title {
-    text-align: center;       /* Заголовок по центру */
+    text-align: center;      
     font-family: 'Instrument Sans', sans-serif;
     font-size: 28px;
     font-weight: bold;
     color: black;
-    margin: 120px 0 20px 0;    /* Верхній відступ, щоб він не злипався з header, і нижній відступ для розділення від grid */
+    margin: 120px 0 20px 0;    
 }
 
 .lessons {
-    display: grid;                              /* Використовуємо grid для розміщення уроків */
-    grid-template-columns: repeat(3, 1fr);      /* 3 колонки однакової ширини */
-    gap: 70px;                                  /* Відстань між елементами */
-    padding: 10px 60px 0 60px;                    /* Відступи від країв і коригування відступу зверху через фіксований header */
+    display: grid;                             
+    grid-template-columns: repeat(3, 1fr);      
+    gap: 70px;                                 
+    padding: 10px 60px 0 60px;                    
 }
 
 .lesson {
     position: relative;
-    background-color: rgba(16, 1, 2, 0.3); /* Легкий фон для кожного уроку */
-    border-radius: 30px; /* Заокруглені кути */
+    background-color: rgba(16, 1, 2, 0.3); 
+    border-radius: 30px; 
     padding: 4px 10px 0 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    height: 200px; /* Встановлюємо висоту кожного уроку */
+    height: 200px; 
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -142,7 +145,7 @@ footer p {
 
 .lesson p {
     padding: 0 10px;
-    font-family: 'Instrument Sans', sans-serif; /* Шрифт для кнопок */
+    font-family: 'Instrument Sans', sans-serif; 
     font-size: 15px;
     color: #F5F5F5;
     margin-bottom: 0;
@@ -179,19 +182,19 @@ footer p {
 
 .tests {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Два стовпці */
-    gap: 20px; /* Відстань між тестами */
-    padding: 0 60px 60px 60px; /* Відступи від країв */
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 20px; 
+    padding: 0 60px 60px 60px; 
 }
 
 .test {
     display: flex;
-    justify-content: space-between; /* Елементи розташовані по краях */
+    justify-content: space-between; 
     align-items: center;
-    background-color: rgba(16, 1, 2, 0.3); /* Напівпрозорий фон */
-    border-radius: 15px; /* Заокруглення */
+    background-color: rgba(16, 1, 2, 0.3); 
+    border-radius: 15px; 
     padding: 15px 20px;
-    height: 80px; /* Фіксована висота */
+    height: 80px; 
 }
 
 .test div:first-child {
@@ -242,12 +245,12 @@ footer p {
 
 .progress-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Три рівні колонки */
-    gap: 40px; /* Відступи між елементами */
-    justify-items: center; /* Вирівнювання всередині кожної колонки */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+    justify-items: center; 
     align-items: center;
     text-align: center;
-    padding: 10px 60px 10px 60px; /* Відступи від країв */
+    padding: 10px 60px 10px 60px;
 }
 
 .progress-item {
@@ -298,7 +301,7 @@ footer p {
 
 .lessons-value{
     position: absolute;
-    top: 30%; /* Зміни це значення для правильного вирівнювання */
+    top: 30%; 
     transform: translateY(-50%);
     font-size: 50px;
     font-weight: bold;
@@ -310,8 +313,8 @@ footer p {
     font-size: 20px;
     font-weight: bold;
     color: black;
-    margin-top: -97px; 
-    padding: 0 45px 70px 55px;
+    margin-top: -100px; 
+    padding: 0 45px 70px 70px;
 }
 
 .progress-text{
