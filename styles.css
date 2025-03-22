@@ -507,19 +507,19 @@ footer p {
         min-width: 45px;
     }
 
-
     .lessons {
-        grid-template-columns: repeat(1, 1fr); 
-        gap: 30px;
+        grid-template-columns: 1fr; 
+        gap: 35px;
         padding: 0 20px 0 20px;
     }
 
     .lesson{
-        height: 150px;
+        height: 180px;
     }
 
     .lesson h3 {
         font-size: 17px;
+        padding: 0 15px 0 15px;
     }
 
     .lesson p {
@@ -529,8 +529,8 @@ footer p {
 
     .lesson-image-wrapper {
         display: flex;
-        justify-content: center; /* Центруємо картинку горизонтально */
-        width: 100%; /* Щоб картинка не виходила за межі */
+        justify-content: center; 
+        width: 100%; 
     }
     
     .lesson img.lesson-image{
@@ -545,7 +545,6 @@ footer p {
         width: 35px; 
         height: 45px;
     }
-
 
     .tests {
         padding: 0 10px 60px 10px; 
