@@ -536,7 +536,7 @@ footer p {
     }
 
     .lesson-image-wrapper::after {
-        height: 35%; 
+        height: 25%; 
     }
     
     .lesson img.lesson-image{
