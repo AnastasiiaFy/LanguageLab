@@ -533,6 +533,10 @@ footer p {
         height: 60%; 
     }
     
+    .lesson-image-wrapper::after {
+        height: 40%; 
+    }
+
     .lesson img.lesson-image{
         height: auto; 
         width: 100%; 
