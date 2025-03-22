@@ -514,12 +514,12 @@ footer p {
     }
 
     .lesson{
-        height: 180px;
+        height: 185px;
     }
 
     .lesson h3 {
-        top: 75px; /* 📌 Відступ від верху */
-        left: 3px; /* 📌 Вирівнюємо по ширині */
+        top: 70px; 
+        left: 4px; 
         font-size: 17px;
         padding: 0 15px 0 15px;
     }
