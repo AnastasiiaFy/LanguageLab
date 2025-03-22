@@ -530,13 +530,7 @@ footer p {
     }
 
     .lesson-image-wrapper {
-        display: flex;
-        justify-content: center; 
-        width: 100%; 
-    }
-
-    .lesson-image-wrapper::after {
-        height: 25%; 
+        height: 50%; 
     }
     
     .lesson img.lesson-image{
