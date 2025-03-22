@@ -114,7 +114,7 @@ footer p {
 .lessons {
     display: grid;                             
     grid-template-columns: repeat(3, 1fr);      
-    gap: 70px;                                 
+    gap: 60px;                                 
     padding: 10px 60px 0 60px;                    
 }
 
@@ -122,7 +122,7 @@ footer p {
     position: relative;
     background-color: #562B1A; 
     border-radius: 30px; 
-    padding: 4px 10px 0 15px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
@@ -132,11 +132,13 @@ footer p {
 }
 
 .lesson h3 {
+    position: absolute;
+    top: 133px; /* 📌 Відступ від верху */
+    left: 2px; /* 📌 Вирівнюємо по ширині */
     font-family: 'Instrument Sans', sans-serif; 
-    font-size: 22px;
+    font-size: 24px;
     color: #F5F5F5;
-    padding: 8px 10px 0 10px;
-    margin-bottom: 1px;
+    padding: 0 20px 0 20px;
 }
 
 .lesson p {
@@ -144,34 +146,44 @@ footer p {
     font-family: 'Instrument Sans', sans-serif; 
     font-size: 15px;
     color: #F5F5F5;
-    margin-bottom: 0;
-    margin-top: 10px;
+    margin: 10px 0 0 10px;
 }
 
 .lesson-image-wrapper {
-    display: flex;
-    justify-content: center; /* Центруємо картинку горизонтально */
-    width: 100%; /* Щоб картинка не виходила за межі */
+    width: 100%; 
+    height: 67%; 
+    position: relative; 
+    overflow: hidden;
 }
 
 .lesson img.lesson-image{
-    height: 125px; 
-    width: 400px; 
-    max-width: 95%; 
-    margin-top: 10px;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 30px 30px 0 0 ; 
+}
+
+.lesson-image-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 35%, #562B1A 100%);
 }
 
 .lesson img.lesson-icon {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     right: 25px;
     width: 45px; 
     height: 55px;
 }
 
 .lesson:hover {
-    background-color: #402013;
-    transform: scale(1.05); 
+    box-shadow: 0 0 20px 2px rgba(181, 66, 19, 0.6);
+    transform: scale(1.05);
 }
 
 .lesson:active{
@@ -379,12 +391,12 @@ footer p {
     }
 
     .lesson {
-        height: 275px; 
+        height: 285px; 
     }
 
     .lesson h3 {
         font-size: 20px;
-        padding: 0 10px 0 10px;
+        padding: 0 15px 0 15px;
     }
     
     .lesson p {
@@ -522,9 +534,9 @@ footer p {
     }
     
     .lesson img.lesson-image{
-        height: 63px; 
-        width: 200px; 
-        margin-top: 5px;
+        height: auto; 
+        width: 100%; 
+        margin-top: 0;
     }
 
     .lesson img.lesson-icon {
@@ -561,7 +573,7 @@ footer p {
         flex-direction: column; 
         align-items: flex-start;
         gap: 3px;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .test-status {
@@ -575,7 +587,6 @@ footer p {
         margin: 0; 
         padding: 0;
     }
-
 
     .progress-container {
         gap: 15px; 
