@@ -133,8 +133,8 @@ footer p {
 
 .lesson h3 {
     position: absolute;
-    top: 133px; /* 📌 Відступ від верху */
-    left: 2px; /* 📌 Вирівнюємо по ширині */
+    top: 133px; 
+    left: 2px; 
     font-family: 'Instrument Sans', sans-serif; 
     font-size: 24px;
     color: #F5F5F5;
@@ -175,8 +175,8 @@ footer p {
 
 .lesson img.lesson-icon {
     position: absolute;
-    bottom: 30px;
-    right: 25px;
+    bottom: 20px;
+    right: 22px;
     width: 45px; 
     height: 55px;
 }
