@@ -547,8 +547,8 @@ footer p {
     .test-icon {
         width: 30px; 
         height: 25px;
-        margin-left: 2px;
-        margin-right: 6px;
+        margin-left: 0;
+        margin-right: 3px;
     }
 
     .start-btn {
@@ -561,13 +561,13 @@ footer p {
         flex-direction: column; 
         align-items: flex-start;
         gap: 3px;
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .test-status {
         flex-direction: column; 
         align-items: flex-end;
-        font-size: 14px;
+        font-size: 13px;
         margin-right: 6px;
     }
 
