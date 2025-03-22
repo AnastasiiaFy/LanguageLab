@@ -518,7 +518,7 @@ footer p {
     }
 
     .lesson h3 {
-        top: 83px; /* 📌 Відступ від верху */
+        top: 75px; /* 📌 Відступ від верху */
         left: 3px; /* 📌 Вирівнюємо по ширині */
         font-size: 17px;
         padding: 0 15px 0 15px;
@@ -533,6 +533,10 @@ footer p {
         display: flex;
         justify-content: center; 
         width: 100%; 
+    }
+
+    .lesson-image-wrapper::after {
+        height: 35%; 
     }
     
     .lesson img.lesson-image{
