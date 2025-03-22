@@ -535,6 +535,7 @@ footer p {
     
     .lesson-image-wrapper::after {
         height: 40%; 
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, #562B1A 95%);
     }
 
     .lesson img.lesson-image{
